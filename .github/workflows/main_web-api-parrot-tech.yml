@@ -63,4 +63,4 @@ jobs:
         with:
           app-name: 'web-api-parrot-tech'
           slot-name: 'Production'
-          package: ${{ github.workspace }}/myapp
+          package: ./.net-app
