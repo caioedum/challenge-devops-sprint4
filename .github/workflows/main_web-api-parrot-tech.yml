@@ -24,10 +24,12 @@ jobs:
           dotnet-version: '8.x'
 
       - name: Build with dotnet
-        run: dotnet build --configuration Release
+        run: dotnet build ./WebApiChallenge/WebApiChallenge.sln --configuration Release
+        working-directory: ./WebApiChallenge
 
       - name: dotnet publish
-        run: dotnet publish -c Release -o "${{env.DOTNET_ROOT}}/myapp"
+        run: dotnet publish ./WebApiChallenge/WebApiChallenge.sln -c Release -o "${{env.DOTNET_ROOT}}/myapp"
+        working-directory: ./WebApiChallenge
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
