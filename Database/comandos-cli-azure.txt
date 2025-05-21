@@ -1,0 +1,17 @@
+# Cria o grupo de recursos
+az group create --name challenge-devops-parrottech-sprint4 --location brazilsouth
+
+# Cria o servidor SQL
+az sql server create \
+  --name challenge-devops-parrottech-sprint4 \
+  --resource-group MeuGrupoDeRecursos \
+  --location brazilsouth \
+  --admin-user adm-parrottech-sql \
+  --admin-password SprintFiap93!
+
+# Cria o banco de dados
+az sql db create \
+  --resource-group challenge-devops-parrottech-sprint4 \
+  --server challenge-devops-parrottech-sprint4 \
+  --name challenge-devops-parrottech-db \
+  --service-objective S0
