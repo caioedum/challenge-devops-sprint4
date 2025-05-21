@@ -25,7 +25,7 @@ jobs:
         working-directory: ./WebApiChallenge
 
       - name: dotnet publish
-        run: dotnet publish ./WebApiChallenge/WebApiChallenge.csproj -c Release -o "${{ github.workspace }}/myapp"
+        run: dotnet publish WebApiChallenge.csproj -c Release -o "${{ github.workspace }}/myapp"
         working-directory: ./WebApiChallenge
 
       - name: Upload artifact for deployment job
