@@ -16,7 +16,7 @@ az sql db create \
   --name challenge-devops-parrottech-db \
   --service-objective S0
 
-# Cria regra de firewall para os serviços da Azure
+# Cria regra de firewall para os serviços do Azure
 az sql server firewall-rule create \
   --resource-group challenge-devops-parrottech-sprint4 \
   --server challenge-devops-parrottech-sprint4 \
