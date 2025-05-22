@@ -22,6 +22,8 @@ O projeto utiliza pipelines clássicos do Azure DevOps para garantir integraçã
 - **Publicação:** Gera artefatos (ZIP) prontos para deploy.
 - **Release:** Realiza o deploy automático dos artefatos para um Azure Web App.
 
+Link da organização: https://dev.azure.com/MR554025/challenge-devops-sprint4
+
 O pipeline é disparado automaticamente a cada commit na branch principal, garantindo que toda alteração passe por build, testes e deploy sem intervenção manual.
 
 ---
