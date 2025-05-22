@@ -9,7 +9,7 @@ Método POST - Usuário:
   "dataCadastro": "2025-05-19T07:12:54.943Z"
 }
 
-Método POST - ImagemUsuario:
+Método Post - ImagemUsuario:
 
 {
   "usuarioId": 1,
