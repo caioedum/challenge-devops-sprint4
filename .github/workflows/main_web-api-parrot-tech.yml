@@ -25,14 +25,16 @@ jobs:
         working-directory: ./WebApiChallenge
 
       - name: dotnet publish
-        run: dotnet publish WebApiChallenge.csproj -c Release -o "${{ github.workspace }}/myapp"
+        run: |
+          dotnet publish WebApiChallenge.csproj -c Release -o publish
+          Compress-Archive -Path "./publish/*" -DestinationPath "../publish.zip"
         working-directory: ./WebApiChallenge
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: .net-app
-          path: ${{ github.workspace }}/myapp
+          path: ${{ github.workspace }}/publish.zip
 
   deploy:
     runs-on: windows-latest
@@ -63,4 +65,4 @@ jobs:
         with:
           app-name: 'web-api-parrot-tech'
           slot-name: 'Production'
-          package: ./.net-app
+          package: publish.zip
